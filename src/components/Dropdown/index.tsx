@@ -1,6 +1,6 @@
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import './style.css';
-import { Option } from '../commonTypes';
+import { Option } from '../common';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 interface DropdownParams {
@@ -28,32 +28,28 @@ export default function Dropdown({
   };
 
   return (
-    <div className="dropdown-container ">
-      <button
-        className="dropdown-default-label dropdown-common"
-        onClick={toggleDropdown}
-      >
-        <span>{selectedOption.label}</span>
+    <div className="dropdown">
+      <button className="dropdown-toggle dropdown-common" onClick={toggleDropdown}>
+      <span>{selectedOption.label}</span>
         {isOpen ? (
           <IoIosArrowUp className="icon" />
         ) : (
           <IoIosArrowDown className="icon" />
         )}
       </button>
-
-      {isOpen ? (
-        <div className="dropdown-menu">
+      {isOpen && (
+        <ul className="dropdown-menu">
           {options.map((option) => (
-            <button
+            <li><button
               key={option.value}
               className="dropdown-item dropdown-common"
               onClick={() => handler(option)}
             >
               <span>{option.label}</span>
-            </button>
+            </button></li>
           ))}
-        </div>
-      ) : null}
+        </ul>
+      )}
     </div>
   );
 }
