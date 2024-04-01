@@ -9,7 +9,7 @@
     background-color: #DAF2EC;
     color: #07A46C;
     border: 0;
-    font-size: 16px;
+    font-size: 19px;
     min-width: 100%;
     display: flex;
     align-items: center;
@@ -17,12 +17,11 @@
     justify-content: center;
     gap: 10px;
     border-radius: 4px;
+    font-weight: 500 ;
 }
 
 .dropdown-default-label span {
     flex: 1;
-    font-family: "Inter", sans-serif;
-    font-weight: 600 ;
 }
 
 .dropdown-item {
