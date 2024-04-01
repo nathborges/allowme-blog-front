@@ -45,9 +45,7 @@ export default function Content() {
       </div>
       <div className="content-content-container">
         <div className="posts-content-container">
-          <PostCard />
-          <PostCard />
-          <PostCard />
+        <hr className="post-divider" />
           <PostCard />
           <PostCard />
           <PostCard />

@@ -36,7 +36,9 @@
     flex: 1;
 }
 
-.post-card-text-content {
-    gap: 25px;
+.post-divider {
+    width: 100%;
+    border-color: #DBDBEA;
+    border-width: 1px;
+    border-style: solid;
 }
-
