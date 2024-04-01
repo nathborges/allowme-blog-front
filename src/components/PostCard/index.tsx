@@ -13,9 +13,15 @@ export default function PostCard() {
             <span>Date</span>
           </div>
           <div className="social-media">
-            <a><img src={Twitter}/></a>
-            <a><img src={Linkedin}/></a>
-            <a><img src={Link}/></a>
+            <a>
+              <img src={Twitter} />
+            </a>
+            <a>
+              <img src={Linkedin} />
+            </a>
+            <a>
+              <img src={Link} />
+            </a>
           </div>
         </div>
 

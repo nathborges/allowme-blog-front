@@ -1,19 +1,19 @@
 .last-news-main {
-    background-color: #F4F4FA;
-    border-radius: 8px;
-    padding: 30px;
-    gap: 30px;
+  background-color: #f4f4fa;
+  border-radius: 8px;
+  padding: 30px;
+  gap: 30px;
 }
 
 .last-news-main span {
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--grey-dark-1);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--grey-dark-1);
 }
 
 .last-news-items {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: 20px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
 }

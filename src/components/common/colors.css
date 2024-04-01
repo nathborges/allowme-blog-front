@@ -1,10 +1,10 @@
 :root {
-    --grey-dark: #58595D;
-    --grey-dark-1: #18191E;
-    --grey-light: #58595D;
-    --green-dark: #07a46c;
-    --green-light: #daf2ec;
-    --pink: #E04C85;
-    --bg-color: #ffff;
-    --footer-bg: #ECECF4;
-  }
+  --grey-dark: #58595d;
+  --grey-dark-1: #18191e;
+  --grey-light: #58595d;
+  --green-dark: #07a46c;
+  --green-light: #daf2ec;
+  --pink: #e04c85;
+  --bg-color: #ffff;
+  --footer-bg: #ececf4;
+}

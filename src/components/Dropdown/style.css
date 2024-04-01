@@ -6,7 +6,6 @@
 }
 
 .dropdown-toggle {
-  /* background-color: #daf2ec; */
   background-color: var(--green-light);
   color: var(--green-dark);
   border: 0;

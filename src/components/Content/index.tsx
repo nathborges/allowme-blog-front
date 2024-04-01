@@ -1,5 +1,4 @@
 import './style.css';
-import Logo from '../../assets/logos/logo.svg';
 import { Option } from '../common';
 import Dropdown from '../Dropdown';
 import LastNews from '../LastNews';
@@ -45,7 +44,7 @@ export default function Content() {
       </div>
       <div className="content-content-container">
         <div className="posts-content-container">
-        <hr className="post-divider" />
+          <hr className="post-divider" />
           <PostCard />
           <PostCard />
           <PostCard />

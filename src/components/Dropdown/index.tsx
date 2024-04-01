@@ -29,8 +29,11 @@ export default function Dropdown({
 
   return (
     <div className="dropdown">
-      <button className="dropdown-toggle dropdown-common" onClick={toggleDropdown}>
-      <span>{selectedOption.label}</span>
+      <button
+        className="dropdown-toggle dropdown-common"
+        onClick={toggleDropdown}
+      >
+        <span>{selectedOption.label}</span>
         {isOpen ? (
           <IoIosArrowUp className="icon" />
         ) : (
@@ -40,13 +43,15 @@ export default function Dropdown({
       {isOpen && (
         <ul className="dropdown-menu">
           {options.map((option) => (
-            <li><button
-              key={option.value}
-              className="dropdown-item dropdown-common"
-              onClick={() => handler(option)}
-            >
-              <span>{option.label}</span>
-            </button></li>
+            <li>
+              <button
+                key={option.value}
+                className="dropdown-item dropdown-common"
+                onClick={() => handler(option)}
+              >
+                <span>{option.label}</span>
+              </button>
+            </li>
           ))}
         </ul>
       )}
