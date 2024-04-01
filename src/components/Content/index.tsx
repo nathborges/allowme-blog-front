@@ -1,6 +1,6 @@
 import './style.css';
 import Logo from '../../assets/logos/logo.svg';
-import { Option } from '../commonTypes';
+import { Option } from '../common';
 import Dropdown from '../Dropdown';
 import LastNews from '../LastNews';
 import PostCard from '../PostCard';

@@ -10,17 +10,6 @@ export default function LastNews() {
         <LastNewsItem />
         <LastNewsItem />
         <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
-        <LastNewsItem />
       </div>
     </div>
   );

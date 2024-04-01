@@ -3,19 +3,17 @@
     border-radius: 8px;
     padding: 30px;
     gap: 30px;
-    height: 50%;
-    overflow-y: scroll;
 }
 
 .last-news-main span {
-    color: #18191E;
-    font-weight: 500;
-    font-size: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--grey-dark-1);
 }
 
 .last-news-items {
     justify-content: center;
     align-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }

@@ -1,7 +1,7 @@
 .footer-container {
     width: 100%;
     flex: 0 0 auto;
-    background-color: #ECECF4;
+    background-color: var(--footer-bg);
     padding-top: 2vh;
     padding-bottom: 2vh;    
     padding-left: 2vw;
@@ -16,14 +16,13 @@
     height: 4vh;
 }
 
-.footer-img-container img{
+.footer-img-container > img{
     height: 100%;
 }
 
 
-.footer-container span {
-    font-weight: 300;
-    font-size: 20px;
-    color: #58595D;
-
+.footer-container > span {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey-light);
 }
