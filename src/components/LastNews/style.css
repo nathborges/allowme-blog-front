@@ -1,0 +1,21 @@
+.last-news-main {
+    background-color: #F4F4FA;
+    border-radius: 8px;
+    padding: 30px;
+    gap: 30px;
+    height: 50%;
+    overflow-y: scroll;
+}
+
+.last-news-main span {
+    color: #18191E;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.last-news-items {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}

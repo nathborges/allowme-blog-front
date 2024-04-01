@@ -1,0 +1,12 @@
+.header-container {
+    display: flex;
+    min-width: 100%;
+    flex: 0 0 auto;
+    background-color: #ffff;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    min-height: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-sizing: border-box; 
+}

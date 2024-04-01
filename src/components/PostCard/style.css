@@ -1,0 +1,32 @@
+.about-author {
+    justify-content: space-between;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.name-date {
+}
+
+.post-title {
+    color: #18191E;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.post-text {
+    color: #58595D;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.post-card {
+    gap: 30px;
+}
+
+.divider {
+    width: 100%;
+    border-color: #DBDBEA;
+    border-width: 1px;
+    border-style: solid;
+}

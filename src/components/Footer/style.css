@@ -1,0 +1,29 @@
+.footer-container {
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #ECECF4;
+    padding-top: 2vh;
+    padding-bottom: 2vh;    
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-sizing: border-box;
+    max-height: 15vh;
+    align-items: center;
+}
+
+.footer-img-container{
+    flex: 1;
+    height: 4vh;
+}
+
+.footer-img-container img{
+    height: 100%;
+}
+
+
+.footer-container span {
+    font-weight: 300;
+    font-size: 20px;
+    color: #58595D;
+
+}

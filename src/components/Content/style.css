@@ -1,0 +1,42 @@
+.content-main-container {
+    flex: 1;
+    width: 100%;
+    background-color: 'grey';
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    min-height: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-sizing: border-box; 
+    gap: 40px;
+}
+
+.content-dropdown-container {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+}
+
+.content-content-container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    gap: 2vw;
+}
+
+.content-content-container p {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.posts-content-container {
+    flex: 3;
+}
+.last-news-content-container {
+    flex: 1;
+}
+
+.post-card-text-content {
+    gap: 25px;
+}
+
