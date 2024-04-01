@@ -7,7 +7,7 @@
     padding-left: 2vw;
     padding-right: 2vw;
     box-sizing: border-box; 
-    gap: 40px;
+    gap: 30px;
 }
 
 .content-dropdown-container {
@@ -40,4 +40,10 @@
     border-color: #DBDBEA;
     border-width: 1px;
     border-style: solid;
+}
+
+@media screen and (max-width: 800px) {
+    .content-content-container {
+        flex-direction: column-reverse;
+    }
 }

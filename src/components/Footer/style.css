@@ -2,12 +2,12 @@
     width: 100%;
     flex: 0 0 auto;
     background-color: var(--footer-bg);
-    padding-top: 2vh;
-    padding-bottom: 2vh;    
+    padding-top: 19px;
+    padding-bottom: 19px;    
     padding-left: 2vw;
     padding-right: 2vw;
     box-sizing: border-box;
-    max-height: 15vh;
+    max-height: 20vh;
     align-items: center;
 }
 
@@ -25,4 +25,13 @@
     font-weight: 400;
     font-size: 16px;
     color: var(--grey-light);
+}
+
+@media screen and (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
 }

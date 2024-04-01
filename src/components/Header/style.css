@@ -3,13 +3,12 @@
     min-width: 100%;
     flex: 0 0 auto;
     background-color: #ffff;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 19px;
+    padding-bottom: 19px;
     min-height: 4vh;
     padding-left: 2vw;
     padding-right: 2vw;
     box-sizing: border-box; 
-    max-height: 9vh;
 }
 
 .header-container img{
