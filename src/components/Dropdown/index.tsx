@@ -35,9 +35,9 @@ export default function Dropdown({
       >
         <span>{selectedOption.label}</span>
         {isOpen ? (
-          <IoIosArrowDown className="icon" />
-        ) : (
           <IoIosArrowUp className="icon" />
+        ) : (
+          <IoIosArrowDown className="icon" />
         )}
       </button>
 
