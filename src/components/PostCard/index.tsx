@@ -2,16 +2,15 @@ import './style.css';
 
 export default function PostCard() {
   return (
-    <div className="post-card flex-column">
-      <hr className="divider" />
+    <div className="post-card-container flex-column">
       <div className="post-card-text-content flex-column">
-        <div className="about-author flex-row">
-          <div className="name-date flex-column">
+        <div className="author-info flex-row">
+          <div className="author-date-name flex-column">
             <span className="highlighted">Author</span>
             <span>Date</span>
           </div>
           <div className="social-media">
-            <p>oi</p>
+            <span>oi</span>
           </div>
         </div>
 
@@ -29,7 +28,7 @@ export default function PostCard() {
           chief offer happy had.
         </span>
       </div>
-      <hr className="divider" />
+      <hr className="post-divider" />
     </div>
   );
 }
