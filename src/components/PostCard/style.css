@@ -32,3 +32,8 @@
     padding: 30px;
     gap: 30px;
 }
+
+.social-media {
+    gap: 15px;
+    display: flex;
+}

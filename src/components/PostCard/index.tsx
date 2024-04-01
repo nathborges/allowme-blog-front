@@ -1,4 +1,7 @@
 import './style.css';
+import Twitter from '../../assets/social-media/twitter.svg';
+import Linkedin from '../../assets/social-media/linkedin.svg';
+import Link from '../../assets/social-media/link.svg';
 
 export default function PostCard() {
   return (
@@ -10,7 +13,9 @@ export default function PostCard() {
             <span>Date</span>
           </div>
           <div className="social-media">
-            <span>oi</span>
+            <a><img src={Twitter}/></a>
+            <a><img src={Linkedin}/></a>
+            <a><img src={Link}/></a>
           </div>
         </div>
 
