@@ -3,7 +3,7 @@
 ## Sobre
 
 Essa é o web frontend de uma aplicação de blog pessoal e meu primeiro projetinho em React com Typescript.
-O backend está em um repositório diferente, clique [nesse link ](https://github.com/nathborges/allowme-blog/tree/main) para acessá-lo.
+O backend está em um repositório diferente, clique [nesse link] (https://github.com/nathborges/allowme-blog/tree/main) para acessá-lo.
 
 ## Como iniciar o projeto
 
