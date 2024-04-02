@@ -14,7 +14,7 @@ export default function LastNews() {
   }, []);
 
   const getLastNews = () => {
-    PostService.getAllOrderedByDate(Order.ASC)
+    PostService.getAllOrderedByDate(Order.DESC)
       .then((response: any) => {
         setLastNews(response.data);
       })
@@ -34,7 +34,7 @@ export default function LastNews() {
             <LastNewsItem
               key={index}
               title={post.title}
-              date={post.created_at}
+              date={post.created_date}
             />
           ))}
       </div>

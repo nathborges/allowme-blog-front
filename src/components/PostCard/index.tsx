@@ -28,13 +28,22 @@ export default function PostCard({
             <span>{formattedDate}</span>
           </div>
           <div className="social-media">
-            <a>
+            <a
+              href="https://imgb.ifunny.co/images/37dc265d1e7031d4c21f01d2e9bede93dd8725e1700230edd684eed5d33ba138_1.webp"
+              target="_blank"
+            >
               <img src={Twitter} />
             </a>
-            <a>
+            <a
+              href="https://www.linkedin.com/in/nathaliafborges/"
+              target="_blank"
+            >
               <img src={Linkedin} />
             </a>
-            <a>
+            <a
+              href="https://i.pinimg.com/564x/9a/7c/28/9a7c28903b049b40af2dfe13c9934f41.jpg"
+              target="_blank"
+            >
               <img src={Link} />
             </a>
           </div>

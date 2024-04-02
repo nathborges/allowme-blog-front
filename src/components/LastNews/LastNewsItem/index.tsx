@@ -7,7 +7,7 @@ interface LastNewsItemParams {
 }
 
 export default function LastNewsItem({ title, date }: LastNewsItemParams) {
-  const formattedDate = moment(date).format('DD/MM/YYYY');
+    const formattedDate = moment(date).format('DD/MM/YYYY');
   return (
     <div className="last-news-item flex-column">
       <span>{title}</span>

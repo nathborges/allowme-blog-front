@@ -4,6 +4,6 @@ export default interface IPostData {
   id: number;
   title: string;
   body: string;
-  created_at: Date;
+  created_date: Date;
   user: IUserData;
 }
