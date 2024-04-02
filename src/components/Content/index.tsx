@@ -8,6 +8,7 @@ import IUserData from '../../types/Users.types';
 import PostService from '../../services/Posts.service';
 import { useEffect, useState } from 'react';
 import IPostData from '../../types/Posts.types';
+import NoPostsMessage from '../NoPostsMessage';
 
 const dropdownDateFilterOptions: Option[] = [
   {
@@ -23,15 +24,13 @@ const dropdownDateFilterOptions: Option[] = [
 export default function Content() {
   const [posts, setPosts] = useState<Array<IPostData>>([]);
   const [authorsOptions, setAuthorsOptions] = useState<Array<Option>>([]);
-  const [order, setOrder] = useState<Order>(Order.ASC);
-  const [userFilter, setUserFilter] = useState<string>('');
 
   useEffect(() => {
-    getPosts();
-    getAuthor();
+    getPostsByDate(Order.ASC);
+    getAuthors();
   }, []);
 
-  const getPosts = () => {
+  const getPostsByDate = (order: Order) => {
     PostService.getAllOrderedByDate(order)
       .then((response: any) => {
         setPosts(response.data);
@@ -41,10 +40,20 @@ export default function Content() {
       });
   };
 
-  const getPostsByAuthors = () => {
+  const getPostsByAuthors = (userFilter: string) => {
     PostService.getAllByUser(userFilter)
+    .then((response: any) => {
+      setPosts(response.data);
+    })
+      .catch((e: Error) => {
+        console.log(e);
+      });
+  };
+
+  const getAuthors = () => {
+    UsersService.getAll()
       .then((response: any) => {
-        setPosts(response.data);
+        mapUsersToAuthorsOption(response.data);
       })
       .catch((e: Error) => {
         console.log(e);
@@ -58,25 +67,14 @@ export default function Content() {
     setAuthorsOptions(authors);
   };
 
-  const getAuthor = () => {
-    UsersService.getAll()
-      .then((response: any) => {
-        mapUsersToAuthorsOption(response.data);
-      })
-      .catch((e: Error) => {
-        console.log(e);
-      });
-  };
-
   const handleAuthorFilterChange = (value: string) => {
-    setUserFilter(value);
-    getPostsByAuthors();
+    getPostsByAuthors(value);
   };
 
   const handleOrderFilterChange = (value: Order) => {
-    setOrder(value);
-    getPosts();
+    getPostsByDate(value);
   };
+
   return (
     <div className="content-main-container flex-column">
       <div className="content-dropdown-container">
@@ -94,7 +92,7 @@ export default function Content() {
       <div className="content-content-container">
         <div className="posts-content-container">
           <hr className="post-divider" />
-          {posts &&
+          {posts.length !== 0  &&
             posts.map((post, index) => (
               <PostCard
                 key={index}
@@ -104,6 +102,9 @@ export default function Content() {
                 date={post.created_at}
               />
             ))}
+          {posts.length === 0 && (
+              <NoPostsMessage />
+            )}
         </div>
         <div className="last-news-content-container">
           <LastNews />
