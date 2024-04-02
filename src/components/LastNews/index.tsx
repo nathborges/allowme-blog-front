@@ -8,29 +8,29 @@ import { Order } from '../common';
 export default function LastNews() {
   const qntLimitOfCards = 4;
 
-  const [posts, setPosts] = useState<Array<IPostData>>([]);
+  const [lastNews, setLastNews] = useState<Array<IPostData>>([]);
   useEffect(() => {
-    getPosts();
+    getLastNews();
   }, []);
 
-  const lastNews = posts.slice(0, qntLimitOfCards);
-
-  const getPosts = () => {
+  const getLastNews = () => {
     PostService.getAllOrderedByDate(Order.ASC)
       .then((response: any) => {
-        setPosts(response.data);
+        setLastNews(response.data);
       })
       .catch((e: Error) => {
         console.log(e);
       });
   };
 
+  const firstLastNews = lastNews.slice(0, qntLimitOfCards);
+
   return (
     <div className="last-news-main flex-column">
       <span>Últimas notícias</span>
       <div className="last-news-items flex-column">
-        {posts &&
-          lastNews.map((post, index) => (
+        {firstLastNews &&
+          firstLastNews.map((post, index) => (
             <LastNewsItem
               key={index}
               title={post.title}
