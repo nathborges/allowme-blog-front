@@ -46,9 +46,8 @@ export default function Dropdown({
       {isOpen && (
         <ul className="dropdown-menu">
           {options.map((option, index) => (
-            <li>
+            <li key={index}>
               <button
-                key={index}
                 className="dropdown-item dropdown-common"
                 onClick={() => handler(option)}
               >
