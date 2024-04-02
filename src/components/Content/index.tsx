@@ -26,7 +26,7 @@ export default function Content() {
   const [authorsOptions, setAuthorsOptions] = useState<Array<Option>>([]);
 
   useEffect(() => {
-    getPostsByDate(Order.ASC);
+    getPostsByDate(Order.DESC);
     getAuthors();
   }, []);
 
@@ -42,9 +42,9 @@ export default function Content() {
 
   const getPostsByAuthors = (userFilter: string) => {
     PostService.getAllByUser(userFilter)
-    .then((response: any) => {
-      setPosts(response.data);
-    })
+      .then((response: any) => {
+        setPosts(response.data);
+      })
       .catch((e: Error) => {
         console.log(e);
       });
@@ -71,8 +71,9 @@ export default function Content() {
     getPostsByAuthors(value);
   };
 
-  const handleOrderFilterChange = (value: Order) => {
-    getPostsByDate(value);
+  const handleOrderFilterChange = (value: string) => {
+    const orderTyped: Order = value as Order;
+    getPostsByDate(orderTyped);
   };
 
   return (
@@ -92,19 +93,17 @@ export default function Content() {
       <div className="content-content-container">
         <div className="posts-content-container">
           <hr className="post-divider" />
-          {posts.length !== 0  &&
+          {posts.length !== 0 &&
             posts.map((post, index) => (
               <PostCard
                 key={index}
                 title={post.title}
                 content={post.body}
                 name={post.user.full_name}
-                date={post.created_at}
+                date={post.created_date}
               />
             ))}
-          {posts.length === 0 && (
-              <NoPostsMessage />
-            )}
+          {posts.length === 0 && <NoPostsMessage />}
         </div>
         <div className="last-news-content-container">
           <LastNews />
