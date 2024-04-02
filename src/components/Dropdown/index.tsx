@@ -6,15 +6,18 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 interface DropdownParams {
   defaultLabel: string;
   options: Option[];
-  onDropdownSelected: (value: string) => null;
+  onDropdownSelected: (value: string) => void;
 }
 
 export default function Dropdown({
   defaultLabel,
   options,
   onDropdownSelected,
-}: DropdownParams): ReactElement {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+}: DropdownParams) {
+  const [selectedOption, setSelectedOption] = useState({
+    label: defaultLabel,
+    value: '',
+  });
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -24,7 +27,7 @@ export default function Dropdown({
   const handler = (option: Option) => {
     toggleDropdown();
     setSelectedOption(option);
-    onDropdownSelected(option);
+    onDropdownSelected(option.value);
   };
 
   return (
@@ -42,10 +45,10 @@ export default function Dropdown({
       </button>
       {isOpen && (
         <ul className="dropdown-menu">
-          {options.map((option) => (
+          {options.map((option, index) => (
             <li>
               <button
-                key={option.value}
+                key={index}
                 className="dropdown-item dropdown-common"
                 onClick={() => handler(option)}
               >

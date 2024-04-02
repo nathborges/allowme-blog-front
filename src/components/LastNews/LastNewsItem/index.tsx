@@ -1,10 +1,17 @@
+import moment from 'moment';
 import './style.css';
 
-export default function LastNewsItem() {
+interface LastNewsItemParams {
+  title: string;
+  date: Date;
+}
+
+export default function LastNewsItem({ title, date }: LastNewsItemParams) {
+  const formattedDate = moment(date).format('DD/MM/YYYY');
   return (
     <div className="last-news-item flex-column">
-      <span>Sang lose of hour then he left find</span>
-      <span className="highlighted">17/01/2018</span>
+      <span>{title}</span>
+      <span className="highlighted">{formattedDate}</span>
     </div>
   );
 }
